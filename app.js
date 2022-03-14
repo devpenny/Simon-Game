@@ -9,6 +9,6 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 })
 
-app.listen(3000, (req, res)=>{
+app.listen(process.env.PORT || 3000, (req, res)=>{
     console.log("server running on port 3000");
 });
