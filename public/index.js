@@ -73,7 +73,6 @@ const asyncPlayAnswer = (answer) => new Promise((resolve, reject) => {
 const asyncGameStart = async () => {
     answerList.push(generateColor());
     $("h1").text("level " + answerList.length);
-    console.log(answerList);
     for (answer of answerList) {
         await asyncPlayAnswer(answer);
     }
@@ -92,8 +91,6 @@ $("body").on("keydown", (event) => {
 
 $(".btn").on("click", (button) => {
     if (clickable) {
-        console.log(button.target.id);
-        console.log(playerAnswers);
         playerAnswers.push(button.target.id);
 
 
